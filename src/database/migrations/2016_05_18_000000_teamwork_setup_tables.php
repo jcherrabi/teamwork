@@ -15,7 +15,7 @@ class TeamworkSetupTables extends Migration
     {
         Schema::table( \Config::get( 'teamwork.users_table' ), function ( Blueprint $table )
         {
-            $table->integer( 'current_team_id' )->unsigned()->nullable();
+            $table->integer( 'current_team_id' )->after('id')->unsigned()->nullable();
         } );
 
 
